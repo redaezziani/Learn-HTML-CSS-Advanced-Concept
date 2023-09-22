@@ -26,3 +26,7 @@
   <img src="./images/screenShot.png" width="350" title="hover text">
   <img src="./images/screenShot2.png" width="350" alt="accessibility text">
 </p>
+
+<p />
+and dont forget to follow me on my social media accounts and give me a star in this repository and share it with your friends to help me to make more projects and learn more concept in HTML and CSS
+</p>
