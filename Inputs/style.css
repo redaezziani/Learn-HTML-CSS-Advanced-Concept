@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 :root{
-    --primary-color: #2c2946;
+    --primary-color: #380fcf;
     --secondary-color: #f5f5f5;
     --rounded-md: 0.5rem;
     --rounded-sm: 0.2rem;
     --font-family: 'Inter', sans-serif;
     --flow-hidden: hidden;
-    --text-muted: #3d4247;
+    --text-muted: #6a727851;
     --font-md: 1.2rem;
     --font-sm: 0.9rem;
 }
@@ -28,15 +28,55 @@ body{
     font-weight: 400;
     line-height: 1.5;
     color: var(--text-muted);
-    background-color: var(--secondary-color);
     overflow-x: var(--flow-hidden);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 
 
 /* Utilities */
+.input{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-items: center;
+    border: 1.8px solid var(--primary-color);
+    background-color: white;
+    border-radius: var(--rounded-sm);
+    
+}
+.input input{
+    width: 22rem;
+    padding: 10px 12px;
+    border: none;
+    font-size: .9rem;
+    transition: .3s ease-in-out ;
+    background-color: transparent;
+}
+.input input:focus{
+    outline: none;
+    border: none;
+}
 
+.input label{
+    left: .4rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    color: var(--text-muted);
+    transition: .3s ease-in-out ;
+    padding:0px 8px;
+}
+.input input:focus + label, input:not(:placeholder-shown) + label{
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    transform: translateY(-.7rem);
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+}
