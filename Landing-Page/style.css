@@ -13,6 +13,7 @@
     --font-md: 1.2rem;
     --font-sm: 0.9rem;
     --bg-slate: #e4e5f48e;
+    --bg-slate-dark: #e4e5f4;
 }
 
 *, *::before, *::after{
@@ -84,7 +85,7 @@ nav .nav-links{
     min-width: 27rem;
     padding: .7rem 1rem;
     border-radius: var(--rounded-md);
-    border: 1px solid var(--bg-slate);
+    border: 1px solid var(--bg-slate-dark);
     backdrop-filter: blur(10px);
     background-color: rgba(228, 220, 255, 0.203);
 }
@@ -156,6 +157,17 @@ nav .nav-links ul li .castome-select .items-container .item{
 nav .nav-links ul li .castome-select .items-container .item:hover{
     color: var(--primary-color);
 }
+nav .menu{
+    display: none;
+    color: var(--primary-color);
+    font-size: 1.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    
+}
+nav .menu.active{
+    color: var(--primary-color);
+}
 /*
 lets make the hero section
 */
@@ -221,4 +233,50 @@ section .btn-container-demo-startd .btn.btn-start{
     object-fit: cover;
     border-radius: var(--rounded-md);
     box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.1);
+}
+
+
+@media screen and (max-width: 768px){
+    nav .nav-links ul li .castome-select .items-container{
+        left: calc(50% - 4rem);
+    }
+    section .hero-paragraph{
+        max-width: 80%;
+    }
+    .dash-board img{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 576px){
+    nav .nav-links {
+        width: 90%;
+    }
+    nav .nav-links ul li .castome-select .items-container{
+        left: calc(50% - 4rem);
+    }
+    section .hero-paragraph{
+        max-width: 90%;
+    }
+    .dash-board img{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 435px){
+
+    nav .nav-links {
+        display: none;
+        left: calc(50% - 4rem);
+    }
+    section .hero-paragraph{
+        max-width: 100%;
+    }
+    .dash-board img{
+        width: 100%;
+    }
+    nav .menu{
+        display: block;
+    }
+    nav{
+        justify-content: space-between;
+    }
 }
