@@ -12,8 +12,8 @@
     --text-dark: #1b122a;
     --font-md: 1.2rem;
     --font-sm: 0.9rem;
-    --bg-slate: #e4e5f48e;
-    --bg-slate-dark: #e4e5f4;
+    --bg-slate: #dcdeff8e;
+    --bg-slate-dark: #d5d7fb;
 }
 
 *, *::before, *::after{
@@ -63,6 +63,19 @@ body::before{
     border-radius: 50%;
     filter: blur(150px);
     z-index: -1;
+}
+.grid{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    z-index: 1;
+
+}
+.grid img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 nav{
     direction: rtl;
