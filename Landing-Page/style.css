@@ -110,7 +110,6 @@ nav {
 }
 
 nav .nav-links {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,6 +120,10 @@ nav .nav-links {
     backdrop-filter: blur(10px);
     background-color: rgba(228, 220, 255, 0.203);
 }
+/* 
+lets make a list for side list for nav bar when the screen is small
+*/
+
 
 nav .nav-links ul {
     width: 100%;
@@ -185,6 +188,19 @@ nav .nav-links ul li .castome-select .items-container {
 nav .nav-links ul li .castome-select .items-container.active {
     display: flex;
     top: 2.3rem;
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 nav .nav-links ul li .castome-select .items-container .item {
@@ -208,7 +224,9 @@ nav .menu {
     transition: all 0.3s ease-in-out;
 
 }
-
+nav .menu img{
+    width: 40px;
+}
 nav .menu.active {
     color: var(--primary-color);
 }
@@ -321,7 +339,6 @@ section .btn-container-demo-startd .btn.btn-start {
 @media screen and (max-width: 435px) {
 
     nav .nav-links {
-        display: none;
         left: calc(50% - 4rem);
     }
 
@@ -339,5 +356,57 @@ section .btn-container-demo-startd .btn.btn-start {
 
     nav {
         justify-content: space-between;
+    }
+
+    nav .nav-links{
+        display: none;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem 1rem;
+        background-color: rgba(255, 255, 255, 0.495);
+        transition: all 0.3s ease-in-out;
+        z-index: 100;
+        backdrop-filter: blur(10px);
+        border: none;
+        border-radius: none;
+        transform: translateX(100%);
+    }
+    nav .nav-links.active{
+        display: block;
+        transform: translateX(0);
+        animation: fadeInNav 0.5s ease-in-out forwards;
+    }
+    nav .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: start;
+        align-items: start;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/*
+lets make animation for the nav bar when the screen is small
+*/
+
+@keyframes fadeInNav {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

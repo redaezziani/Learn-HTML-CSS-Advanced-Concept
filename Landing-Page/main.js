@@ -1,5 +1,6 @@
 const castomeSelect=document.querySelectorAll(".castome-select");
-
+const navLink=document.querySelector(".nav-links");
+const menu=document.getElementById("menu");
 
 castomeSelect.forEach((select)=>{
     select.addEventListener("click",()=>{
@@ -11,3 +12,8 @@ castomeSelect.forEach((select)=>{
     });
 }
 );
+
+menu.addEventListener("click",()=>{
+    menu.classList.toggle("active");
+    navLink.classList.toggle("active");
+});
