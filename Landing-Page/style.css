@@ -156,8 +156,11 @@ nav .nav-links ul li .castome-select .text-wrapper-icon {
     gap: 0.5rem;
     color: var(--primary-color);
     font-size: .9rem;
+    transition: all 0.3s ease-in-out;
 }
-
+nav .nav-links ul li .castome-select .text-wrapper-icon:hover{
+    color: #5132dce0;
+}
 nav .nav-links ul li .castome-select .text-wrapper-icon i.active {
     color: var(--primary-color);
     rotate: 180deg;
@@ -169,7 +172,7 @@ nav .nav-links ul li .castome-select .items-container {
     left: calc(60% - 4rem);
     top: 10px;
     background-color: white;
-    min-width: 9rem;
+    min-width: 10rem;
     padding: 10px;
     width: fit-content;
     border-radius: var(--rounded-md);
@@ -192,10 +195,10 @@ nav .nav-links ul li .castome-select .items-container .item {
     font-size: .9rem;
     transition: all 0.3s ease-in-out;
 }
-
-nav .nav-links ul li .castome-select .items-container .item:hover {
-    color: var(--primary-color);
+nav .nav-links ul li .castome-select .items-container .item:hover{
+    color: #5132dce0;
 }
+
 
 nav .menu {
     display: none;
