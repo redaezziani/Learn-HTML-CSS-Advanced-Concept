@@ -275,14 +275,17 @@ section .btn-container-demo-startd .btn {
     border-radius: var(--rounded-md);
     border: 1px solid var(--bg-slate);
     backdrop-filter: blur(10px);
-    background-color: rgba(228, 220, 255, 0.203);
+    background-color: #e4dcff34;
     color: var(--primary-color);
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
-
+section .btn-container-demo-startd .btn:hover{
+    background-color:#e4dcffb7;
+    color: #3e20d3;
+}
 section .btn-container-demo-startd .btn.btn-start {
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -296,7 +299,6 @@ section .btn-container-demo-startd .btn.btn-start {
     align-items: center;
     position: relative;
     padding: 2rem;
-
 }
 
 .dash-board img {
@@ -330,7 +332,6 @@ section .btn-container-demo-startd .btn.btn-start {
     object-fit: cover;
     border-radius: var(--rounded-md);
 }
-
 
 @media screen and (max-width: 768px) {
     nav .nav-links ul li .castome-select .items-container {
