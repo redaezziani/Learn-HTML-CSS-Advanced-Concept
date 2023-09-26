@@ -2,7 +2,7 @@ const castomeSelect=document.querySelectorAll(".castome-select");
 const navLink=document.querySelector(".nav-links");
 const menu=document.getElementById("menu");
 
-castomeSelect.forEach((select)=>{
+castomeSelect.forEach( (select) =>{
     select.addEventListener("click",()=>{
         const icon=select.querySelector("#icon");
         const optionsContainer=select.querySelector(".items-container");
