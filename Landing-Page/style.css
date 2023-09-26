@@ -290,9 +290,13 @@ section .btn-container-demo-startd .btn.btn-start {
 
 .dash-board {
     width: 100%;
+    height: fit-content;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    padding: 2rem;
+
 }
 
 .dash-board img {
@@ -301,6 +305,30 @@ section .btn-container-demo-startd .btn.btn-start {
     object-fit: cover;
     border-radius: var(--rounded-md);
     box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.dash-board .img-container{
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+    right: 20rem;
+    top: -3rem;
+    padding: 10px;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--bg-slate-dark);
+    backdrop-filter: blur(10px);
+    background-color: rgba(228, 220, 255, 0.203);
+    border-radius: var(--rounded-md);
+}
+.dash-board .img-container.v2{
+    left: 20rem;
+    top: 8rem;
+}
+.dash-board .img-container img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--rounded-md);
 }
 
 
