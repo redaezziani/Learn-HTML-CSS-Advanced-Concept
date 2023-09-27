@@ -1,0 +1,187 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
+
+:root{
+    --primary-color: #252833;
+    --text-color: #fff;
+    --rounded-sm: 0.25rem;
+    --rounded-md: 0.5rem;
+    --font-family: 'Roboto', sans-serif;
+    --font-size: .9rem;
+    --font-weight: 400;
+    --line-height: 1.5;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b6bcce5d;
+}
+
+form{
+    width: 70%;
+    height: 600px;
+    box-shadow: 0px 0px 10px 0px rgba(170, 167, 167, 0.507);
+    display: flex;
+    justify-items: start;
+    align-items: center;
+    gap: 1rem;
+    border-radius: var(--rounded-md);
+    background-color: white;
+    overflow: hidden;
+
+}
+img{
+    width: 40px;
+    height: 40px;
+}
+form .image-container{
+    height: 100%;
+    width: 50%;
+}
+form .image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+form .inputs-container{
+    height: 100%;
+    width: 50%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+form .inputs-container .head{
+    width: 70%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: .5rem;
+    flex-direction: column;
+}
+form .inputs-container .head h1{
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+form .inputs-container .head p{
+    font-size: .9rem;
+    font-weight: 400;
+    color: #808183;
+}
+
+form .inputs-container .input-group{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: .5rem;
+}
+form .inputs-container .input-group label{
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+form .inputs-container .input-group input{
+    width: 100%;
+    height: 38px;
+    border: 1px solid #808183;
+    border-radius: var(--rounded-sm);
+    padding: 0 .5rem;
+    outline: none;
+    font-size: .9rem;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+form .bottom{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+form .bottom .group{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: .5rem;
+}
+
+form .bottom .group .castom-checkbox{
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    position: relative;
+    border-radius: var(--rounded-sm);
+
+}
+form .bottom .group .castom-checkbox label{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9;
+}
+form .bottom .group .castom-checkbox input[type="checkbox"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+form .bottom .group .castom-checkbox .checkmark{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: var(--rounded-sm);
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+form .bottom .group .castom-checkbox .checkmark img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+form .bottom .group .castom-checkbox input[type="checkbox"]:checked ~ .checkmark{
+    opacity: 1;
+    animation: check .5s forwards;
+    z-index: 10;
+}
+form .bottom .group .castom-checkbox input[type="checkbox"]:checked ~ .checkmark img{
+    transform: scale(1.2);
+}
+@keyframes check{
+    0%{
+        transform: scale(0);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+

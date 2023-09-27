@@ -332,6 +332,9 @@ section .btn-container-demo-startd .btn.btn-start {
     object-fit: cover;
     border-radius: var(--rounded-md);
 }
+/*
+this is for the large screen
+*/
 
 @media screen and (max-width: 768px) {
     nav .nav-links ul li .castome-select .items-container {
@@ -346,7 +349,9 @@ section .btn-container-demo-startd .btn.btn-start {
         width: 80%;
     }
 }
-
+/*
+this is for the tablet screen
+*/
 @media screen and (max-width: 576px) {
     nav .nav-links {
         width: 90%;
@@ -364,7 +369,9 @@ section .btn-container-demo-startd .btn.btn-start {
         width: 90%;
     }
 }
-
+/*
+this is for the small screen
+*/
 @media screen and (max-width: 435px) {
 
     nav .nav-links {
