@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root{
-    --primary-color: #252833;
-    --secondary-color: #eaedf0;
+    --primary-color: #000000;
+    --secondary-color: #d4dbe1;
     --text-color: #fff;
     --rounded-sm: 0.25rem;
     --rounded-md: 0.5rem;
@@ -29,13 +29,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #b6bcce5d;
+    background-color: #dbdee75d;
 }
 
 form{
     width: 70%;
     height: 600px;
-    box-shadow: 0px 0px 10px 0px #aaa7a781;
+    box-shadow: 0px 0px 10px 0px #d8d8d881;
     display: flex;
     justify-items: start;
     align-items: center;
@@ -182,6 +182,7 @@ form .bottom p{
     color: var(--primary-color);
 }
 form .btn{
+    margin-top: .5rem;
     width: 80%;
     height: 38px;
     border: none;
@@ -223,6 +224,24 @@ form .btn.btn-secondary p{
     font-size: .9rem;
     font-weight: 500;
     color: var(--primary-color);
+}
+form .singup{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+form .singup p{
+    font-size: .8rem;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+form .singup a{
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
 }
 @keyframes check{
     0%{
