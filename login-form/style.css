@@ -1,12 +1,13 @@
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root{
     --primary-color: #252833;
+    --secondary-color: #eaedf0;
     --text-color: #fff;
     --rounded-sm: 0.25rem;
     --rounded-md: 0.5rem;
-    --font-family: 'Roboto', sans-serif;
+    --font-family: 'Inter', sans-serif;	
     --font-size: .9rem;
     --font-weight: 400;
     --line-height: 1.5;
@@ -34,7 +35,7 @@ body{
 form{
     width: 70%;
     height: 600px;
-    box-shadow: 0px 0px 10px 0px rgba(170, 167, 167, 0.507);
+    box-shadow: 0px 0px 10px 0px #aaa7a781;
     display: flex;
     justify-items: start;
     align-items: center;
@@ -69,7 +70,7 @@ form .inputs-container{
 }
 
 form .inputs-container .head{
-    width: 70%;
+    width: 80%;
     display: flex;
     justify-content: start;
     align-items: start;
@@ -88,7 +89,7 @@ form .inputs-container .head p{
 }
 
 form .inputs-container .input-group{
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -103,7 +104,7 @@ form .inputs-container .input-group label{
 form .inputs-container .input-group input{
     width: 100%;
     height: 38px;
-    border: 1px solid #808183;
+    border: 1px solid var(--secondary-color);
     border-radius: var(--rounded-sm);
     padding: 0 .5rem;
     outline: none;
@@ -112,7 +113,7 @@ form .inputs-container .input-group input{
     color: var(--primary-color);
 }
 form .bottom{
-    width: 70%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -122,13 +123,14 @@ form .bottom .group{
     display: flex;
     justify-content: start;
     align-items: center;
+    font-size: .8rem;
     gap: .5rem;
 }
 
 form .bottom .group .castom-checkbox{
     width: 15px;
     height: 15px;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--secondary-color);
     cursor: pointer;
     position: relative;
     border-radius: var(--rounded-sm);
@@ -168,6 +170,59 @@ form .bottom .group .castom-checkbox input[type="checkbox"]:checked ~ .checkmark
 }
 form .bottom .group .castom-checkbox input[type="checkbox"]:checked ~ .checkmark img{
     transform: scale(1.2);
+}
+form .bottom .group .label{
+    font-size: .8rem;
+    font-weight: 400;
+    color: #3c414a;
+}
+form .bottom p{
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+form .btn{
+    width: 80%;
+    height: 38px;
+    border: none;
+    border-radius: var(--rounded-sm);
+    outline: none;
+    font-size: .9rem;
+    font-weight: 400;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    cursor: pointer;
+    transition: all .3s ease-in-out;	
+}
+form .btn:hover{
+    background-color: #3c414a;
+}
+
+form .btn.btn-primary{
+    background-color: #3c414a;
+}
+form .btn.btn-primary:hover{
+    background-color: var(--primary-color);
+}
+form .btn.btn-secondary{
+    background-color: #fff;
+    border: 1px solid var(--secondary-color);
+    color: var(--primary-color);
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 0px 5rem;
+}
+form .btn.btn-secondary img{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+    margin-right: .5rem;
+}
+form .btn.btn-secondary p{
+    font-size: .9rem;
+    font-weight: 500;
+    color: var(--primary-color);
 }
 @keyframes check{
     0%{
